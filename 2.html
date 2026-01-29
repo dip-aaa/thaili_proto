@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Getting Started - Women's Financial Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13eca4",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221c",
+                        "peach-soft": "#fff0e6",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Duolingo-style 3D button effect */
+        .duo-button {
+            box-shadow: 0 4px 0px #0fb47d;
+            transition: all 0.1s ease;
+        }
+        .duo-button:active {
+            box-shadow: 0 0px 0px #0fb47d;
+            transform: translateY(4px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111816] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-transparent p-4 pb-2 justify-between">
+<button onclick="window.location.href='1.html'" class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-[#111816] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Getting Started</h2>
+<div class="w-10"></div>
+</div>
+
+<!-- Goal Selection Section -->
+<div class="flex flex-col items-center px-6 pt-4 pb-6">
+<!-- Icon -->
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">flag</span>
+</div>
+
+<!-- Title -->
+<h1 class="text-[#111816] dark:text-white text-3xl font-extrabold leading-tight tracking-tight text-center mb-3">
+What's your main financial goal?
+</h1>
+
+<!-- Subtitle -->
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-relaxed text-center mb-8 px-4">
+Choose your priority to get personalized recommendations and savings plans.
+</p>
+</div>
+
+<!-- Goal Options -->
+<div class="px-6 flex-grow">
+<div class="space-y-4">
+<!-- Goal 1: Emergency Fund -->
+<button onclick="selectGoal(this)" class="goal-option w-full flex items-center gap-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-2 border-gray-100 dark:border-gray-700 hover:border-primary transition-all">
+<div class="size-12 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-2xl">security</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="text-[#111816] dark:text-white text-lg font-bold">Emergency Fund</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Build a safety net for unexpected expenses</p>
+</div>
+<div class="goal-indicator size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center">
+<div class="size-3 rounded-full bg-primary scale-0 transition-transform"></div>
+</div>
+</button>
+
+<!-- Goal 2: Home Ownership -->
+<button onclick="selectGoal(this)" class="goal-option w-full flex items-center gap-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-2 border-gray-100 dark:border-gray-700 hover:border-primary transition-all">
+<div class="size-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-500 text-2xl">home</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="text-[#111816] dark:text-white text-lg font-bold">Home Ownership</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Save for your dream home down payment</p>
+</div>
+<div class="goal-indicator size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center">
+<div class="size-3 rounded-full bg-primary scale-0 transition-transform"></div>
+</div>
+</button>
+
+<!-- Goal 3: Education -->
+<button onclick="selectGoal(this)" class="goal-option w-full flex items-center gap-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-2 border-gray-100 dark:border-gray-700 hover:border-primary transition-all">
+<div class="size-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-2xl">school</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="text-[#111816] dark:text-white text-lg font-bold">Education Fund</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Invest in your or your children's education</p>
+</div>
+<div class="goal-indicator size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center">
+<div class="size-3 rounded-full bg-primary scale-0 transition-transform"></div>
+</div>
+</button>
+
+<!-- Goal 4: Business -->
+<button onclick="selectGoal(this)" class="goal-option w-full flex items-center gap-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-2 border-gray-100 dark:border-gray-700 hover:border-primary transition-all">
+<div class="size-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-500 text-2xl">business_center</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="text-[#111816] dark:text-white text-lg font-bold">Start a Business</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Fund your entrepreneurial dreams</p>
+</div>
+<div class="goal-indicator size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center">
+<div class="size-3 rounded-full bg-primary scale-0 transition-transform"></div>
+</div>
+</button>
+</div>
+</div>
+
+<!-- Footer Progress & Action -->
+<div class="mt-auto px-6 pt-6 pb-10">
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-3 mb-6">
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+<div class="h-2.5 w-6 rounded-full bg-primary"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+</div>
+
+<!-- Primary Action Button -->
+<button id="continueBtn" onclick="window.location.href='4.html'" class="w-full h-14 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-lg font-extrabold rounded-full shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-not-allowed" disabled>
+Continue
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-sm text-zinc-500 dark:text-zinc-400 mt-4 font-medium">Step 3 of 4</p>
+</div>
+
+<!-- Subtle Background Decorations -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-peach-soft dark:bg-[#2c1d15] rounded-full blur-3xl -z-10 opacity-40"></div>
+<div class="absolute top-20 -right-20 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10 opacity-40"></div>
+</div>
+
+<script>
+function selectGoal(button) {
+    // Remove selection from all options
+    document.querySelectorAll('.goal-option').forEach(option => {
+        option.classList.remove('border-primary', 'bg-primary/5');
+        option.classList.add('border-gray-100', 'dark:border-gray-700');
+        const indicator = option.querySelector('.goal-indicator div');
+        indicator.classList.remove('scale-100');
+        indicator.classList.add('scale-0');
+    });
+    
+    // Select current option
+    button.classList.remove('border-gray-100', 'dark:border-gray-700');
+    button.classList.add('border-primary', 'bg-primary/5');
+    const indicator = button.querySelector('.goal-indicator div');
+    indicator.classList.remove('scale-0');
+    indicator.classList.add('scale-100');
+    
+    // Enable continue button
+    const continueBtn = document.getElementById('continueBtn');
+    continueBtn.disabled = false;
+    continueBtn.classList.remove('bg-gray-300', 'dark:bg-gray-700', 'text-gray-500', 'dark:text-gray-400', 'cursor-not-allowed');
+    continueBtn.classList.add('bg-primary', 'text-[#10221c]', 'duo-button');
+}
+</script>
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Saved Deals</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13eca4",
+              "background-light": "#f6f8f7",
+              "background-dark": "#10221c",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-primary {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen text-[#111816] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 p-4 pb-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button onclick="window.location.href='4.html'" class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-sm">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-xl font-extrabold leading-tight tracking-tight">Saved Deals</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-sm">
+<span class="material-symbols-outlined text-2xl">tune</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Category Filter Chips -->
+<div class="flex gap-3 p-4 overflow-x-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 shadow-sm">
+<p class="text-[#10221c] text-sm font-bold">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-6 shadow-sm border border-gray-100 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium">Finance</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-6 shadow-sm border border-gray-100 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium">Lifestyle</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-6 shadow-sm border border-gray-100 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium">Health</p>
+</div>
+</div>
+<!-- Deals List -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Deal Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3">
+<span class="material-symbols-outlined text-primary fill-primary">favorite</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">local_cafe</span>
+</div>
+<div class="flex flex-col flex-1 pr-6">
+<span class="text-primary text-xs font-extrabold uppercase tracking-wider">Ends in 2 days</span>
+<h3 class="text-lg font-extrabold leading-tight mt-0.5">15% Off at Himalayan Java</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Valid on all beverages</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Himalayan Java coffee shop logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiunxPRAY9ld0qPSSpoEWHSvxv4Kiw6xaEp-V9r69N3h5-iZAYO-duo5SuKSabndL-UmJLKl8erykU2LxWGmbGaYIJRq42YNM2BxYfwYV34H6ETFTpMM5BT_u5orlxJxTSamoUmgRtPXLMzJzp4jPvCIA3oO-pVybr33CoM14AT-xmPPP_xeWA3JPfuzZ5KAIpMO8y146RzJYHTHLS9NR1x7j7bhR1MojQ9_HM7oVrkcwfgakpSjMWJ-vH12T1YXxXKEHbvYxz7tK_');"></div>
+<span class="text-xs font-bold text-gray-500">Coffee &amp; Tea</span>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 px-6 bg-primary/20 text-green-800 gap-2 text-sm font-extrabold shadow-[0_4px_0px_0px_#0fb980] hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-lg">confirmation_number</span>
+                            Redeem
+                        </button>
+</div>
+</div>
+<!-- Deal Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3">
+<span class="material-symbols-outlined text-primary fill-primary">favorite</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">account_balance_wallet</span>
+</div>
+<div class="flex flex-col flex-1 pr-6">
+<span class="text-primary text-xs font-extrabold uppercase tracking-wider">Ends in 5 days</span>
+<h3 class="text-lg font-extrabold leading-tight mt-0.5">Rs. 500 Cashback</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">On Nabil Bank Credit Card</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Nabil Bank finance logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVGuw8VFxH4ZKgzM71g92A17Un7whyMdXpOtUgTk_5Z7db3sQyPe0nSpmVu-PhKZX04PUeQkcwD2OKDeK31YpD0l30IoTh5g1CZs94I-xJHrvIZc4JraTAQoRkDWIoyb9G5XLRNXetrfWg0b__YAltOGfx23vhmTD2Sw958k2NHC7mDgcqWQATmM9L-Jw85EE4mxFfnnPLX3Nd-ffRv2eVrUJ2JkmLS0HfNpUhacS7z8ISm1D_qYak2gcHdkCOsc3K-6jH9SyCGBai');"></div>
+<span class="text-xs font-bold text-gray-500">Finance</span>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 px-6 bg-primary/20 text-green-800 gap-2 text-sm font-extrabold shadow-[0_4px_0px_0px_#0fb980] hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-lg">confirmation_number</span>
+                            Redeem
+                        </button>
+</div>
+</div>
+<!-- Deal Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3">
+<span class="material-symbols-outlined text-primary fill-primary">favorite</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">medical_services</span>
+</div>
+<div class="flex flex-col flex-1 pr-6">
+<span class="text-primary text-xs font-extrabold uppercase tracking-wider">Ends in 1 week</span>
+<h3 class="text-lg font-extrabold leading-tight mt-0.5">Free Health Checkup</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">At Norvic International Hospital</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Norvic Hospital medical logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhA4TYUIRF5SI-QZ25qmJQ3ZKSLgvrRJ9TWrMMbZo4sBqFHg5IDDAPBuwDvQiCMbe0nXb2wpHTALQqMEwpznGjyeAyvp3GWyjoFaa3g8QANtRr6hXOgaWzXRPkKUbpzjpxhcqWjecKaJhXOcGlpNCoyur-7lIbf9RW0TvqPMiEOou7ftLvJLkg7skNLIM3teBM2w1FJ_VcYS8wIZdk6YsfS62cegneieMLvMlC2jkcavwPJBrUxY4ONcJYmVpgFHNJNMxA6DKjWGTj');"></div>
+<span class="text-xs font-bold text-gray-500">Health</span>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 px-6 bg-primary/20 text-green-800 gap-2 text-sm font-extrabold shadow-[0_4px_0px_0px_#0fb980] hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-lg">confirmation_number</span>
+                            Redeem
+                        </button>
+</div>
+</div>
+<!-- Deal Card 4 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-gray-100 dark:border-gray-800 relative overflow-hidden opacity-80">
+<div class="absolute top-0 right-0 p-3">
+<span class="material-symbols-outlined text-primary fill-primary">favorite</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">shopping_bag</span>
+</div>
+<div class="flex flex-col flex-1 pr-6">
+<span class="text-gray-400 text-xs font-extrabold uppercase tracking-wider line-through">Ends in 2 hours</span>
+<h3 class="text-lg font-extrabold leading-tight mt-0.5">20% Off Bhatbhateni</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">On grocery shopping over 5k</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Bhatbhateni supermarket logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO2HgLdLaSH2d_hP0HStWlfFyUHNYtbZM966HgfRjnY4cmcdRlgqS6uvjS5Kwe1KlTFGICsDbY19-_WDWU8q5NXo8CIav1R_0N0VvgAbzLCBOXZXJPAotoLXXm1Rs4z-GSMnFcNItCGFOtv6xm8nh5IvvD0kU_Bp77m7hRvM_J7dAas9_IXBDhmwPbq6W4J9GsBIwJeXDWLt-rggTgyiDX8NikniqKdibTIpTlpjtFinIu1N3U-WnI1uPSASVZIQ4f-Qgk2VGF61Eo');"></div>
+<span class="text-xs font-bold text-gray-500">Shopping</span>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 px-6 bg-primary/20 text-green-800 gap-2 text-sm font-extrabold shadow-[0_4px_0px_0px_#0fb980] hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-lg">confirmation_number</span>
+                            Redeem
+                        </button>
+</div>
+</div>
+</div>
+<!-- Suggestion Banner -->
+<div class="mx-4 my-6 p-6 rounded-xl bg-primary/5 dark:bg-primary/10 border-2 border-dashed border-primary/30 flex flex-col items-center text-center gap-3">
+<div class="size-16 rounded-full bg-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-white text-3xl">celebration</span>
+</div>
+<h4 class="text-lg font-extrabold">Discover More Savings!</h4>
+<p class="text-sm text-gray-600 dark:text-gray-300">New exclusive deals for women have just been added to the marketplace.</p>
+<button onclick="window.location.href='5.html'" class="mt-2 w-full h-12 rounded-full border-2 border-[#10221c] dark:border-primary text-[#10221c] dark:text-primary font-extrabold text-sm uppercase tracking-widest hover:bg-primary/5 transition-colors">
+                    Browse Marketplace
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Spacer -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 flex items-center justify-around px-6 z-50">
+<button onclick="window.location.href='4.html'" class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">HOME</span>
+</button>
+<button onclick="window.location.href='6.html'" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-primary">local_offer</span>
+<span class="text-[10px] font-bold">DEALS</span>
+</button>
+<button onclick="window.location.href='7.html'" class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold">ALERTS</span>
+</button>
+<button onclick="window.location.href='8.html'" class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">PROFILE</span>
+</button>
+</div>
+<!-- Bottom padding for fixed navigation -->
+<div class="h-20"></div>
+</div>
+</body></html>

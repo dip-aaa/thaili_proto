@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Main Home Screen - Financial Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13eca4",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221c",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1.25rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .duo-card-shadow {
+            box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+        }
+        .duo-card-shadow-active:active {
+            box-shadow: 0 0px 0 0 rgba(0, 0, 0, 0.1);
+            transform: translateY(4px);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b-2 border-gray-100 dark:border-gray-800 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full border-2 border-primary bg-cover bg-center" data-alt="User profile picture of a woman smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8SjOVyOZInEOZmkgaJQXvqBhvpxQsxzcwb7Jbwg7mEzehcNOJmJg8_iMsuaJBfoVLj86DYy7w03fjAEjw56pFSbzRLAzweWZyNlbV6HMe53bmNenAix4BHKn2QD311J4AK_HulfqC0B3-oxlB81HPD30ewF6nh1uWFS1PWXXfZuW82zCLJ2PQHPPdZI94q-hXEbxDKPQzbruzKpw8pNdpiHEZyjOUtLrEh2HFAhTGuB8tTXBBaAtYA1EV0cjSYvJg3fkRVcQtO7tH");'>
+</div>
+<div class="absolute bottom-0 right-0 size-4 bg-primary border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<div>
+<h2 class="text-[#111816] dark:text-white text-xl font-extrabold leading-tight tracking-tight">Namaste, Maya! 🙏</h2>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-bold uppercase tracking-widest">Level 4 Saver</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button onclick="window.location.href='7.html'" class="size-11 flex items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111816] dark:text-white border-b-4 border-gray-200 dark:border-gray-900 active:border-b-0 active:translate-y-1 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</nav>
+<main class="pb-24">
+<!-- Daily Goal / Progress Section -->
+<div class="p-4">
+<div class="bg-primary/10 dark:bg-primary/5 rounded-xl p-4 border-2 border-primary/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-full flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="text-[#111816] dark:text-white font-bold text-sm">Today's Goal</p>
+<p class="text-gray-600 dark:text-gray-400 text-xs">Save NPR 500 more this week</p>
+</div>
+</div>
+<div class="w-16 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[70%]"></div>
+</div>
+</div>
+</div>
+<!-- Categories Section -->
+<section class="px-4 py-2">
+<h2 class="text-[#111816] dark:text-white text-2xl font-extrabold mb-4 tracking-tight">Financial Hub</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Banking Card -->
+<div onclick="window.location.href='3.html'" class="bg-white dark:bg-gray-800 p-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 duo-card-shadow duo-card-shadow-active flex flex-col items-center text-center gap-3 cursor-pointer">
+<div class="size-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-500 text-4xl">account_balance</span>
+</div>
+<div>
+<p class="text-[#111816] dark:text-white text-lg font-bold">Banking</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium">Manage Savings</p>
+</div>
+</div>
+<!-- Education Card -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 duo-card-shadow duo-card-shadow-active flex flex-col items-center text-center gap-3">
+<div class="size-20 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-500 text-4xl">school</span>
+</div>
+<div>
+<p class="text-[#111816] dark:text-white text-lg font-bold">Education</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium">Learn &amp; Earn</p>
+</div>
+</div>
+<!-- Healthcare Card -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 duo-card-shadow duo-card-shadow-active flex flex-col items-center text-center gap-3">
+<div class="size-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-4xl">volunteer_activism</span>
+</div>
+<div>
+<p class="text-[#111816] dark:text-white text-lg font-bold">Healthcare</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium">Family Wellness</p>
+</div>
+</div>
+<!-- Agriculture Card -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 duo-card-shadow duo-card-shadow-active flex flex-col items-center text-center gap-3">
+<div class="size-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600 text-4xl">agriculture</span>
+</div>
+<div>
+<p class="text-[#111816] dark:text-white text-lg font-bold">Agriculture</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium">Grow Your Farm</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Deals Section -->
+<section id="trending-deals" class="mt-6">
+<div class="flex items-center justify-between px-4 mb-4">
+<h3 class="text-[#111816] dark:text-white text-xl font-extrabold tracking-tight">Trending Deals</h3>
+<button onclick="window.location.href='6.html'" class="text-primary font-bold text-sm">See All</button>
+</div>
+<div class="flex overflow-x-auto snap-x snap-mandatory [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden px-4 gap-4 pb-4">
+<!-- Deal 1 -->
+<div onclick="window.location.href='5.html'" class="snap-start flex-none w-[280px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-100 dark:border-gray-700 duo-card-shadow cursor-pointer">
+<div class="h-40 bg-cover bg-center" data-alt="Modern dairy farming equipment in a field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsTvphEI_AMh56zes2CydcmPa27uOEvyTJb4OTIriY1_UqADvXOMvLvZY3IhNzwW2CmG_kgu-IIoUE89YngKXV8RuCMTRkKpoKhlnHCAKfZpjsK-ZpHVgfWHn4T591FnhiRwraaphv-AAGuDO2BFa3AG97JN83scI0A_-012pLJg5ZwyxStvRHfd0G2Ltlfm_f9hPA8yonTLjJ_HBM0XQfH_OLDArj96FIsDCKQSh9c5C9-a7TYKh_Z-u2SJl-Iv96pFUfy0nJNJ1R");'>
+<div class="m-3 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-full uppercase inline-block">Flash Sale</div>
+</div>
+<div class="p-4">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-tight">Dairy Equipment</p>
+<p class="text-primary text-sm font-extrabold mt-1">5% Off Today</p>
+</div>
+</div>
+<!-- Deal 2 -->
+<div onclick="window.location.href='6.html'" class="snap-start flex-none w-[280px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-100 dark:border-gray-700 duo-card-shadow cursor-pointer">
+<div class="h-40 bg-cover bg-center" data-alt="Women participating in a financial workshop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpTMkX9AFuuHrZI0lcbo4P6fLpdc4YS_XUluvb6T5xpoEbvJd1w5ru3NeXBN4VZjBSBffB9J2qyi-BKoGQ-V4Jam2xkOSRdf6C55HmmB0njhZ2nqs2KfrLubvNaX6is2f62n6lkPZyBkbXunnpnpcx9GwmJy7TI5U6JeWOXTEHhm2JwD2bqvegIUplhz61LshZGYNOPhK7oiI6UTM1A_6pLJMDaf-9h3sRSxVyITiDyztABVjpWsPuwPsSgmFY2HWSWAaZ1a3XzkXM");'>
+<div class="m-3 bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded-full uppercase inline-block">Popular</div>
+</div>
+<div class="p-4">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-tight">Financial Literacy</p>
+<p class="text-primary text-sm font-extrabold mt-1">Join Workshop</p>
+</div>
+</div>
+<!-- Deal 3 -->
+<div onclick="window.location.href='7.html'" class="snap-start flex-none w-[280px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-100 dark:border-gray-700 duo-card-shadow cursor-pointer">
+<div class="h-40 bg-cover bg-center" data-alt="Doctor consulting with a patient in a clinic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvUmxTsiapMqfLhVRtIMDHXM3yUEFpnVWtafCP0v11_FMLwpy73Y8xSiWeQRogjYuikHoqi2p4nphRy0NWy04ddEvTfKexlzXVu_w8gJK8wOhFJyWPeZHCgUKdXUNUV0i3dz4Qyu91dE9yMOljeAseY5DkGibztEAbOcLQoZGt9wslzgeZUEId6mmhzkt8X7JeGtjSu0FDGjgo2CPSkceAe2F2Wyiux9QkSeQkYIeJjsVB_O7dWHTdyhupjgBrQRV7yzP7oIIKJP3R");'>
+<div class="m-3 bg-red-500 text-white text-[10px] font-black px-2 py-1 rounded-full uppercase inline-block">Health First</div>
+</div>
+<div class="p-4">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-tight">Health Checkup</p>
+<p class="text-primary text-sm font-extrabold mt-1">20% Discount</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t-2 border-gray-100 dark:border-gray-800 px-6 py-4 flex items-center justify-between z-50">
+<button onclick="window.location.href='4.html'" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined font-bold">home</span>
+<span class="text-[10px] font-black uppercase">Home</span>
+</button>
+<button onclick="window.location.href='6.html'" class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-black uppercase">Deals</span>
+</button>
+<div class="relative -top-6">
+<button onclick="window.location.href='6.html'" class="size-16 bg-primary rounded-full border-4 border-white dark:border-background-dark shadow-xl flex items-center justify-center text-white active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</button>
+</div>
+<button onclick="window.location.href='7.html'" class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-black uppercase">Alerts</span>
+</button>
+<button onclick="window.location.href='8.html'" class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black uppercase">Profile</span>
+</button>
+</nav>
+</body></html>

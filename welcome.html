@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Language Selection - Financial Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13eca4",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221c",
+                        "peach-soft": "#fff0e6",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111816] dark:text-white transition-colors duration-300 h-screen overflow-hidden">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-transparent p-4 pb-2 justify-between">
+<div class="w-10"></div>
+<h2 class="text-[#111816] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Language</h2>
+<div class="w-10"></div>
+</div>
+<!-- Mascot & Interaction Area -->
+<div class="flex flex-col items-center px-6 pt-4 pb-2">
+<!-- Mascot Image Container with Peach Glow -->
+<div class="relative w-full flex justify-center mb-8">
+<div class="absolute inset-0 bg-peach-soft dark:bg-[#2c1d15] rounded-full blur-3xl opacity-60 scale-75"></div>
+<div class="relative w-48 h-48 bg-center bg-no-repeat bg-contain flex items-center justify-center" data-alt="Friendly female mascot waving with a warm smile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYyjZDdIHpB0klBZuBwxGjgO6yR4ERduxu_nk8DpjDJ4E4aPqnHdasc2Tprr1ATRxWCwmCE0S89TB4GG0UTX2W6yMnIHWorSwhS352sC1GsMC3Qz3oLzNhxbHPgNAZV0zRVwOaqJkzycSyLAqcjHnFYR94cbxAurXVsg2G5AEETag53vRx08ZSTczrO_wSa1jLP5nDCw1Y0HAM7mJ6q4WDhyK1k6J3tVdFy7ejEEYJxA3ADY2ul-LXEbry-EnDUHlbfoEuS7m70sLN");'>
+</div>
+</div>
+<!-- Speech Bubble Inspired Greeting -->
+<div class="relative bg-white dark:bg-zinc-900 p-4 rounded-xl border-2 border-primary/20 shadow-sm mb-6 w-full max-w-sm">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white dark:bg-zinc-900 border-l-2 border-t-2 border-primary/20 rotate-45"></div>
+<h2 class="text-[#111816] dark:text-white tracking-tight text-[24px] font-extrabold leading-tight text-center">
+                    Namaste! <br/>Choose your preferred language to get started.
+                </h2>
+</div>
+</div>
+<!-- Language Selection Buttons -->
+<div class="flex flex-col flex-grow px-6 gap-4">
+<!-- English Button -->
+<button class="group flex items-center justify-between overflow-hidden rounded-full h-16 px-6 bg-white dark:bg-zinc-900 border-2 border-[#f0f4f3] dark:border-zinc-800 hover:border-primary active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-lg">🇺🇸</div>
+<span class="text-lg font-bold">English</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-[#dbe6e2] group-hover:border-primary group-hover:bg-primary/20 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 group-hover:scale-100 transition-transform"></div>
+</div>
+</button>
+<!-- Nepali Button -->
+<button class="group flex items-center justify-between overflow-hidden rounded-full h-16 px-6 bg-white dark:bg-zinc-900 border-2 border-[#f0f4f3] dark:border-zinc-800 hover:border-primary active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-lg">🇳🇵</div>
+<span class="text-xl font-bold tracking-wide">नेपाली</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-[#dbe6e2] group-hover:border-primary group-hover:bg-primary/20 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 group-hover:scale-100 transition-transform"></div>
+</div>
+</button>
+</div>
+<!-- Footer Progress & Action -->
+<div class="mt-auto px-6 pt-4 pb-6">
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-3 mb-6">
+<div class="h-2.5 w-6 rounded-full bg-primary"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-[#dbe6e2] dark:bg-zinc-700"></div>
+</div>
+<!-- Primary Action Button -->
+<button onclick="window.location.href='1.html'" class="w-full h-14 bg-primary text-[#10221c] text-lg font-extrabold rounded-full shadow-lg shadow-primary/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Continue
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-sm text-zinc-500 dark:text-zinc-400 mt-4 font-medium">Step 1 of 4</p>
+</div>
+<!-- Subtle Background Decorations -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-peach-soft dark:bg-[#2c1d15] rounded-full blur-3xl -z-10 opacity-40"></div>
+<div class="absolute top-20 -right-20 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10 opacity-40"></div>
+</div>
+</body></html>

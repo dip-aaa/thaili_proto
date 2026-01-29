@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alerts &amp; Updates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13eca4",
+              "background-light": "#f6f8f7",
+              "background-dark": "#10221c",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-full min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden mx-auto max-w-[480px] shadow-xl">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<button onclick="window.location.href='4.html'" class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight flex-1 text-center font-display">Alerts &amp; Updates</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-12 w-12 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Chips Section -->
+<div class="flex gap-3 p-4 overflow-x-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 border-b-4 border-emerald-500 active:border-b-0 active:translate-y-1 transition-all cursor-pointer">
+<p class="text-slate-900 text-sm font-bold font-display">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-6 border-b-4 border-slate-200 dark:border-slate-700 active:border-b-0 active:translate-y-1 transition-all cursor-pointer">
+<p class="text-slate-900 dark:text-white text-sm font-medium font-display">Finances</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-6 border-b-4 border-slate-200 dark:border-slate-700 active:border-b-0 active:translate-y-1 transition-all cursor-pointer">
+<p class="text-slate-900 dark:text-white text-sm font-medium font-display">Learning</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-6 border-b-4 border-slate-200 dark:border-slate-700 active:border-b-0 active:translate-y-1 transition-all cursor-pointer">
+<p class="text-slate-900 dark:text-white text-sm font-medium font-display">Rewards</p>
+</div>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col gap-3 p-4">
+<!-- Welcome Mascot Card -->
+<div class="flex items-center gap-4 bg-primary/20 dark:bg-primary/10 p-4 rounded-xl border-2 border-primary/30">
+<div class="flex-shrink-0 bg-white dark:bg-slate-800 p-2 rounded-full">
+<img class="w-12 h-12 object-contain" data-alt="Cute friendly cartoon owl mascot waving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1tTqng4Va0qifjs-G5t3KRyzaA49xEio9r-klwJbhhwlM91x6ja3nsDvGOuxkwvwMrmTE88hA3GYHyXnrrorSMaUzy5C7ZyLwQ55jqJ2rnE9IGGQBUkHJ28QuPT8qTw_88ZalsX5LiRwHGDnElczy-jXpcLQcA0mUrsKLsDZRiMfF_M-j95d8V77tvIA5d-JothnuLC59FNEXmdji1N-mvHyjppD9xo5CDjDdQvKqzAdJfWjCRbYtSdor9fN5nuMnL0k4uewGusVt"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold font-display">Namaste, Maya!</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium font-display">You have 3 new updates waiting for you today.</p>
+</div>
+</div>
+<div class="mt-2 mb-1 px-1">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest">Recent</h3>
+</div>
+<!-- ListItem 1: Deal -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border-b-4 border-slate-100 dark:border-slate-900 hover:translate-y-[-2px] transition-transform cursor-pointer">
+<div class="bg-orange-100 text-orange-600 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display line-clamp-1">Deal expiring soon!</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal line-clamp-2">Hurry! Bhat-Bhateni 10% offer ends in 2 days. ⏳</p>
+</div>
+<div class="shrink-0 self-start pt-1">
+<p class="text-slate-400 text-[10px] font-bold uppercase">2h ago</p>
+</div>
+</div>
+<!-- ListItem 2: Scholarship -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border-b-4 border-slate-100 dark:border-slate-900 hover:translate-y-[-2px] transition-transform cursor-pointer">
+<div class="bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display line-clamp-1">New Scholarship added!</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal line-clamp-2">Women in Tech 2024 is now open for applications. 🎓</p>
+</div>
+<div class="shrink-0 self-start pt-1">
+<p class="text-slate-400 text-[10px] font-bold uppercase">5h ago</p>
+</div>
+</div>
+<!-- ListItem 3: Goal -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border-b-4 border-slate-100 dark:border-slate-900 hover:translate-y-[-2px] transition-transform cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full m-2"></div>
+<div class="bg-primary/20 text-emerald-600 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display line-clamp-1">Goal Milestone Reached!</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal line-clamp-2">Your 'Gold Savings' goal is 80% complete! 🚀</p>
+</div>
+<div class="shrink-0 self-start pt-1">
+<p class="text-slate-400 text-[10px] font-bold uppercase">1d ago</p>
+</div>
+</div>
+<div class="mt-4 mb-1 px-1">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest">Earlier</h3>
+</div>
+<!-- ListItem 4: Reward -->
+<div class="flex items-center gap-4 bg-white/60 dark:bg-slate-800/60 p-4 rounded-xl shadow-sm border-b-4 border-slate-100 dark:border-slate-900 opacity-80">
+<div class="bg-purple-100 text-purple-600 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display line-clamp-1">Achievement Unlocked</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal line-clamp-2">You earned the 'Weekly Saver' badge! Keep it up. 🌟</p>
+</div>
+<div class="shrink-0 self-start pt-1">
+<p class="text-slate-400 text-[10px] font-bold uppercase">3d ago</p>
+</div>
+</div>
+<!-- ListItem 5: Security -->
+<div class="flex items-center gap-4 bg-white/60 dark:bg-slate-800/60 p-4 rounded-xl shadow-sm border-b-4 border-slate-100 dark:border-slate-900 opacity-80">
+<div class="bg-slate-200 text-slate-600 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display line-clamp-1">Security Update</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal line-clamp-2">Your password was successfully changed.</p>
+</div>
+<div class="shrink-0 self-start pt-1">
+<p class="text-slate-400 text-[10px] font-bold uppercase">1w ago</p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Text -->
+<div class="mt-auto p-8 pb-24 text-center">
+<p class="text-slate-400 dark:text-slate-500 text-sm font-medium font-display italic">"Every small step leads to big change."</p>
+<div class="mt-4 flex justify-center opacity-30">
+<img class="h-8" data-alt="Small decorative floral pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZN9D5dSTFm0pgNvyp4fEzt6bKcv1cyOzQIoVrsf3GzYF82dAqtHRIZSvCchGGAJVfzw_cDE4fPXbOJQXBcP-RxeMHKXXlHN5F-lBnCS-hvjk5AcjkrXU5EWFuxA-w2I_P7hYvaOqdgXjyuYnhk_RUYdY4YpqqLc_9BCJhj2e4IwYDxrxStFUkgCaIDAdomaTs4binwTie9bHqc3CPq9xeRrwjnwRutgS5m0TtHfng6Zz217c0nBWVCznTNIx53Mzu3Z_NY10M4MtZ"/>
+</div>
+</div>
+<!-- App Navigation Bar (Simulator) -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 flex items-center justify-around px-6 z-50">
+<button onclick="window.location.href='4.html'" class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">HOME</span>
+</button>
+<button onclick="window.location.href='6.html'" class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-[10px] font-bold">DEALS</span>
+</button>
+<button onclick="window.location.href='7.html'" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="text-[10px] font-bold">ALERTS</span>
+</button>
+<button onclick="window.location.href='8.html'" class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">PROFILE</span>
+</button>
+</div>
+<!-- Add padding to prevent content from being hidden behind bottom nav -->
+<div class="h-20"></div>
+</div>
+</body></html>
