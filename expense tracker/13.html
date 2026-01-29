@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thaili - Track Expense</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0D9488", // Vibrant Teal
+              "background-light": "#F8FAFC",
+              "background-dark": "#0F172A", // Navy
+              "card-light": "#FFFFFF",
+              "card-dark": "#1E293B",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              "xl": "1.25rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<div class="w-full max-w-[402px] bg-background-light dark:bg-background-dark min-h-screen flex flex-col relative overflow-hidden">
+<header class="px-6 py-4 flex items-center justify-between">
+<button onclick="window.location.href='../4.html'" class="p-2 -ml-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold">Track Expense</h1>
+<div class="w-10"></div> 
+</header>
+<div class="px-6 mb-8">
+<div class="bg-slate-100 dark:bg-slate-800 p-1.5 rounded-full flex items-center">
+<button onclick="window.location.href='12.html'" class="flex-1 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Set Budget
+                </button>
+<button class="flex-1 py-2.5 text-sm font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-700 rounded-full shadow-sm">
+                    Track
+                </button>
+<button onclick="window.location.href='14.html'" class="flex-1 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Analytics
+                </button>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto px-6 pb-32 hide-scrollbar">
+<div class="mb-8">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 px-1">Category</h2>
+<div class="grid grid-cols-4 gap-4">
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Food')">
+<div class="w-14 h-14 rounded-2xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-primary ring-2 ring-primary transition-all">
+<span class="material-icons-outlined">restaurant</span>
+</div>
+<span class="text-xs font-medium">Food</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Transport')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">directions_car</span>
+</div>
+<span class="text-xs font-medium">Transport</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Shopping')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">shopping_bag</span>
+</div>
+<span class="text-xs font-medium">Shopping</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Leisure')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">movie</span>
+</div>
+<span class="text-xs font-medium">Leisure</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Health')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">medical_services</span>
+</div>
+<span class="text-xs font-medium">Health</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Bills')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">home</span>
+</div>
+<span class="text-xs font-medium">Bills</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Education')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">school</span>
+</div>
+<span class="text-xs font-medium">Education</span>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer" onclick="selectCategory(this, 'Others')">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-icons-outlined">more_horiz</span>
+</div>
+<span class="text-xs font-medium">Others</span>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 px-1">Recent Expenses</h2>
+<div id="expensesList" class="space-y-3">
+<!-- Expenses will be added here dynamically -->
+<div class="text-center py-8 text-slate-400">
+<span class="material-icons-outlined text-4xl mb-2 opacity-50">receipt_long</span>
+<p class="text-sm">No expenses added yet</p>
+<p class="text-xs">Tap a category above to add your first expense</p>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 px-1">Quick Add</h2>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-1 px-1">
+<button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
+<span>☕️ Coffee</span>
+<span class="text-primary font-semibold">$4.50</span>
+</button>
+<button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
+<span>🚕 Uber</span>
+<span class="text-primary font-semibold">$12.00</span>
+</button>
+<button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
+<span>🍎 Groceries</span>
+<span class="text-primary font-semibold">$25.00</span>
+</button>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Spent Today</p>
+<p class="text-2xl font-bold">$124.50</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Daily Budget</p>
+<p class="text-lg font-semibold">$200.00</p>
+</div>
+</div>
+<div class="relative h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 62%"></div>
+</div>
+<div class="mt-2 flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span>0%</span>
+<span>Remaining: $75.50</span>
+<span>100%</span>
+</div>
+</div>
+</main>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<button class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-teal-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-icons-outlined">add</span>
+                Add Expense
+            </button>
+</div>
+<div class="hidden">
+</div>
+</div>
+<div class="fixed top-0 left-0 w-full h-full -z-10 bg-slate-100 dark:bg-slate-950 flex items-center justify-center opacity-30 pointer-events-none">
+<div class="w-[800px] h-[800px] bg-teal-500/10 blur-[120px] rounded-full"></div>
+</div>
+
+<!-- Expense Modal -->
+<div id="expenseModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl w-full max-w-sm mx-auto overflow-hidden">
+<!-- Modal Header -->
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white" id="modalTitle">Add Expense</h3>
+<button onclick="closeExpenseModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+<span class="material-icons-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+
+<!-- Modal Body -->
+<div class="px-6 py-6 space-y-6">
+<!-- Amount Input -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Amount</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">$</span>
+<input type="number" id="expenseAmount" placeholder="0.00" class="w-full pl-8 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" step="0.01">
+</div>
+</div>
+
+<!-- Reason Input -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">What did you spend on?</label>
+<input type="text" id="expenseReason" placeholder="e.g., Lunch at cafe" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+
+<!-- Category Display -->
+<div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+<span class="material-icons-outlined text-primary" id="categoryIcon">restaurant</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Category</p>
+<p class="font-semibold text-slate-900 dark:text-white" id="categoryName">Food</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal Footer -->
+<div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50">
+<div class="flex gap-3">
+<button onclick="closeExpenseModal()" class="flex-1 py-3 px-4 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-semibold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Cancel</button>
+<button onclick="addExpense()" class="flex-1 py-3 px-4 bg-primary text-white rounded-xl font-semibold hover:bg-teal-700 transition-colors shadow-lg shadow-primary/20">Add Expense</button>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let selectedCategory = '';
+const categoryIcons = {
+    'Food': 'restaurant',
+    'Transport': 'directions_car',
+    'Shopping': 'shopping_bag',
+    'Leisure': 'movie',
+    'Health': 'medical_services',
+    'Bills': 'home',
+    'Education': 'school',
+    'Others': 'more_horiz'
+};
+
+function selectCategory(element, category) {
+    // Remove highlight from all categories
+    const allCategories = document.querySelectorAll('.grid.grid-cols-4 > div > div');
+    allCategories.forEach(categoryDiv => {
+        categoryDiv.className = 'w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:text-primary transition-all';
+    });
+    
+    // Add highlight to selected category
+    const categoryDiv = element.querySelector('div');
+    categoryDiv.className = 'w-14 h-14 rounded-2xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-primary ring-2 ring-primary transition-all';
+    
+    // Open the modal
+    openExpenseModal(category);
+}
+
+function openExpenseModal(category) {
+    selectedCategory = category;
+    document.getElementById('modalTitle').textContent = `Add ${category} Expense`;
+    document.getElementById('categoryName').textContent = category;
+    document.getElementById('categoryIcon').textContent = categoryIcons[category];
+    document.getElementById('expenseModal').classList.remove('hidden');
+    document.getElementById('expenseAmount').focus();
+}
+
+function closeExpenseModal() {
+    document.getElementById('expenseModal').classList.add('hidden');
+    document.getElementById('expenseAmount').value = '';
+    document.getElementById('expenseReason').value = '';
+}
+
+function addExpense() {
+    const amount = document.getElementById('expenseAmount').value;
+    const reason = document.getElementById('expenseReason').value;
+    
+    if (!amount || !reason) {
+        alert('Please fill in both amount and reason.');
+        return;
+    }
+    
+    // Add expense to the list
+    addExpenseToList(selectedCategory, amount, reason);
+    closeExpenseModal();
+}
+
+function addExpenseToList(category, amount, reason) {
+    const expensesList = document.getElementById('expensesList');
+    
+    // Remove the "no expenses" message if it exists
+    const noExpensesMsg = expensesList.querySelector('.text-center');
+    if (noExpensesMsg) {
+        noExpensesMsg.remove();
+    }
+    
+    // Get current time
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('en-US', { 
+        hour: 'numeric', 
+        minute: '2-digit',
+        hour12: true 
+    });
+    
+    // Create expense item
+    const expenseItem = document.createElement('div');
+    expenseItem.className = 'bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-2xl shadow-sm';
+    
+    expenseItem.innerHTML = `
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <span class="material-icons-outlined text-primary">${categoryIcons[category]}</span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="font-semibold text-slate-900 dark:text-white truncate">${reason}</p>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-medium">${category}</span>
+                            <span class="text-xs text-slate-400">•</span>
+                            <span class="text-xs text-slate-400">${timeString}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-lg font-bold text-slate-900 dark:text-white">$${parseFloat(amount).toFixed(2)}</p>
+                        <button onclick="deleteExpense(this)" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-red-100 dark:hover:bg-red-900/20 text-slate-400 hover:text-red-500 transition-colors">
+                            <span class="material-icons-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add to the top of the list (most recent first)
+    expensesList.insertBefore(expenseItem, expensesList.firstChild);
+}
+
+function deleteExpense(button) {
+    // Find the expense item container and remove it
+    const expenseItem = button.closest('.bg-white');
+    expenseItem.remove();
+    
+    // Check if list is empty and show placeholder
+    const expensesList = document.getElementById('expensesList');
+    if (expensesList.children.length === 0) {
+        expensesList.innerHTML = `
+            <div class="text-center py-8 text-slate-400">
+                <span class="material-icons-outlined text-4xl mb-2 opacity-50">receipt_long</span>
+                <p class="text-sm">No expenses added yet</p>
+                <p class="text-xs">Tap a category above to add your first expense</p>
+            </div>
+        `;
+    }
+}
+
+// Close modal when clicking outside
+document.getElementById('expenseModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeExpenseModal();
+    }
+});
+</script>
+
+</body></html>

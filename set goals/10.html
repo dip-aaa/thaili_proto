@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Goal - Thaili</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221d",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111816] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full max-w-[480px] mx-auto flex-col overflow-x-hidden bg-background-light dark:bg-background-dark shadow-xl">
+<!-- Top Navigation -->
+<div class="flex items-center bg-transparent p-4 pb-2 justify-between">
+<div class="text-[#111816] dark:text-white flex size-12 shrink-0 items-center justify-center cursor-pointer" onclick="window.location.href='11.html'">
+<span class="material-symbols-outlined text-2xl">close</span>
+</div>
+<h2 class="text-[#111816] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">New Goal</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full bg-transparent text-[#111816] dark:text-white p-0">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+</button>
+</div>
+</div>
+<!-- Mascot Hero Section -->
+<div class="px-4 py-4">
+<div class="relative w-full aspect-[16/10] bg-gradient-to-br from-primary/10 to-primary/30 dark:from-primary/20 dark:to-background-dark rounded-xl flex flex-col items-center justify-center overflow-hidden border-2 border-primary/20 border-dashed">
+<!-- Mascot Placeholder Illustration -->
+<div class="w-32 h-32 mb-2 bg-contain bg-center bg-no-repeat" data-alt="Friendly teal pouch mascot growing with golden coins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzIRBTAdktwFMWhukZhsVJAQEKuW0ONtAwivPSAHvix5IvMKIVaaLNYRdcxgyB36TEYeU5lS1v2ZmlYk2NmqbSCWT4OHGc2UHgPndFhJ1-bO29DBNnkWCkoMmmNHWYBBHC_m2BHGbyEATnP_I67f5PA1hXs0-kvnuDFSz5uGVWwFcyjeUDYe5TGiCOfswEBNbGuhqHpfgh6yG59681TGLr5MgJhW8ACXuZ8C1bY6vALlvlu9a-QroJwRk3qdgFv25fSK5F73Mk7kXs');"></div>
+<div class="bg-white/90 dark:bg-background-dark/90 px-4 py-2 rounded-full shadow-sm">
+<p class="text-sm font-bold text-emerald-800 dark:text-primary leading-tight">"Let's make it happen!"</p>
+</div>
+</div>
+</div>
+<!-- Form Content -->
+<div class="flex flex-col gap-6 px-4 pb-10">
+<div class="space-y-1">
+<h1 class="text-[#111816] dark:text-white tracking-tight text-[28px] font-extrabold leading-tight text-center">What are you saving for?</h1>
+<p class="text-center text-slate-500 dark:text-slate-400 text-sm">Every big dream starts with a small pouch.</p>
+</div>
+<!-- Input: Goal Name -->
+<div class="flex flex-col gap-2">
+<label class="px-2">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-normal pb-1">Goal Name</p>
+</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<input class="form-input flex w-full rounded-full border-2 border-[#dbe6e3] dark:border-slate-700 bg-white dark:bg-slate-900 text-[#111816] dark:text-white focus:outline-none focus:ring-0 focus:border-primary h-16 pl-14 pr-6 placeholder:text-slate-400 text-lg font-medium transition-all" placeholder="e.g., Dream Bike, World Tour" value=""/>
+</div>
+</div>
+<!-- Input: Target Amount -->
+<div class="flex flex-col gap-2">
+<label class="px-2">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-normal pb-1">Target Amount</p>
+</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-500 font-bold">
+                        NPR
+                    </div>
+<input class="form-input flex w-full rounded-full border-2 border-[#dbe6e3] dark:border-slate-700 bg-white dark:bg-slate-900 text-[#111816] dark:text-white focus:outline-none focus:ring-0 focus:border-primary h-16 pl-14 pr-16 placeholder:text-slate-400 text-lg font-bold transition-all" placeholder="0.00" type="number" value=""/>
+</div>
+</div>
+<!-- Input: Deadline (Optional) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-2">
+<p class="text-[#111816] dark:text-white text-base font-bold leading-normal">Set a Deadline</p>
+<span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Optional</span>
+</div>
+<div class="relative group">
+<input type="date" id="deadline-input" class="w-full h-16 rounded-full border-2 border-[#dbe6e3] dark:border-slate-700 bg-white dark:bg-slate-900 text-[#111816] dark:text-white focus:outline-none focus:ring-0 focus:border-primary px-6 text-lg font-medium transition-all cursor-pointer" min="" onchange="updateCalendarDisplay(this.value)" style="color-scheme: light;"/>
+</div>
+</div>
+<!-- Summary Text -->
+<div class="bg-primary/10 dark:bg-primary/5 rounded-xl p-4 mt-2">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<p class="text-sm text-emerald-900 dark:text-emerald-100 leading-relaxed font-medium">
+                        If you save just <span class="font-bold">NPR 500</span> every week, you'll reach your goal in 12 weeks!
+                    </p>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="mt-auto p-4 bg-background-light dark:bg-background-dark sticky bottom-0 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full flex h-16 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-emerald-950 gap-3 text-lg font-extrabold leading-normal tracking-tight shadow-lg shadow-primary/30 active:scale-[0.98] transition-all" onclick="window.location.href='11.html'">
+<span>Create Goal</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+// Set minimum date to today for the deadline input
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date().toISOString().split('T')[0];
+    const deadlineInput = document.getElementById('deadline-input');
+    if (deadlineInput) {
+        deadlineInput.min = today;
+    }
+});
+
+function updateCalendarDisplay(value) {
+    // Function kept for potential future use
+}
+</script>
+</body></html>

@@ -57,7 +57,7 @@
 <!-- Top Navigation Bar -->
 <div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
 <div class="flex items-center p-4 justify-between">
-<button onclick="window.location.href='4.html'" class="text-[#111816] dark:text-white flex size-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
+<button onclick="window.location.href='../4.html'" class="text-[#111816] dark:text-white flex size-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
 <span class="material-symbols-outlined">arrow_back</span>
 </button>
 <h2 class="text-[#111816] dark:text-white text-lg font-extrabold leading-tight tracking-tight flex-1 text-center">Your Profile</h2>
@@ -183,22 +183,20 @@
 <p class="text-center text-[#61897c] dark:text-zinc-500 text-xs font-medium mt-6">Version 1.4.2 • Made with love in Nepal</p>
 </div>
 <!-- Bottom Navigation Bar -->
-<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 border-t-4 border-zinc-100 dark:border-zinc-800 px-6 py-3 flex justify-between items-center z-50">
-<button onclick="window.location.href='4.html'" class="flex flex-col items-center gap-1 text-zinc-400">
-<span class="material-symbols-outlined">home</span>
-<span class="text-[10px] font-bold uppercase">Home</span>
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white dark:bg-zinc-900 border-t-4 border-zinc-100 dark:border-zinc-800 px-6 flex items-center justify-around z-50">
+<button onclick="window.location.href='../4.html'" class="flex flex-col items-center gap-1.5 text-zinc-400">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
 </button>
-<button onclick="window.location.href='6.html'" class="flex flex-col items-center gap-1 text-zinc-400">
-<span class="material-symbols-outlined">local_offer</span>
-<span class="text-[10px] font-bold uppercase">Deals</span>
+<button onclick="window.location.href='7.html'" class="flex flex-col items-center gap-1.5 text-zinc-400">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Notification</span>
 </button>
-<button onclick="window.location.href='7.html'" class="flex flex-col items-center gap-1 text-zinc-400">
-<span class="material-symbols-outlined">notifications</span>
-<span class="text-[10px] font-bold uppercase">Alerts</span>
-</button>
-<button onclick="window.location.href='8.html'" class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
-<span class="text-[10px] font-bold uppercase">Profile</span>
+<button onclick="window.location.href='8.html'" class="flex flex-col items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
 </button>
 </div>
+<!-- Add padding to prevent content from being hidden behind bottom nav -->
+<div class="h-20"></div>
 </body></html>
