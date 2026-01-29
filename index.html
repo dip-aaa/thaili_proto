@@ -12,8 +12,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#10B981", // Emerald Green
-                        "brand-dark": "#064E3B",
+                        primary: "#05998c",
+                        "primary-dark": "#037c6e",
+                        "primary-darker": "#025043",
+                        "primary-light": "#28a99e",
+                        "primary-lighter": "#81cdc6",
+                        "primary-lightest": "#b3e0dc",
+                        "brand-dark": "#025043",
                     },
                     fontFamily: {
                         display: ["Plus Jakarta Sans", "sans-serif"],
@@ -33,10 +38,10 @@
             filter: drop-shadow(0 10px 15px rgba(16, 185, 129, 0.2));
         }
         .btn-shadow {
-            box-shadow: 0 4px 0px 0px #059669;
+            box-shadow: 0 4px 0px 0px #037c6e;
         }
         .btn-shadow:active {
-            box-shadow: 0 2px 0px 0px #059669;
+            box-shadow: 0 2px 0px 0px #037c6e;
             transform: translateY(2px);
         }
         .overarching-arc {
@@ -46,7 +51,7 @@
             width: 120%;
             height: 35%;
             background: transparent;
-            border-bottom: 80px solid #10B981;
+            border-bottom: 80px solid #05998c;
             border-bottom-left-radius: 100% 100px;
             border-bottom-right-radius: 100% 100px;
             opacity: 0.15;
@@ -59,7 +64,7 @@
             transform: translateX(-50%);
             width: 140%;
             height: 45%;
-            border: 2px solid #10B981;
+            border: 2px solid #05998c;
             border-radius: 50%;
             opacity: 0.1;
             z-index: 0;
@@ -82,7 +87,7 @@
 <path d="M12 24C12 24 4 18 4 12C4 6 10 2 16 2C22 2 24 8 24 8C24 8 26 2 32 2C38 2 44 6 44 12C44 18 36 24 36 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
 </svg>
 </div>
-<div class="bg-emerald-50 w-32 h-32 rounded-[2.5rem] flex items-center justify-center thaili-logo-shadow border-4 border-primary">
+<div class="w-32 h-32 rounded-[2.5rem] flex items-center justify-center thaili-logo-shadow border-4 border-primary" style="background-color: #b3e0dc;">
 <span class="material-symbols-outlined text-primary text-7xl" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">
                         account_balance_wallet
                     </span>

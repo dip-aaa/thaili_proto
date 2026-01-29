@@ -14,10 +14,14 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#13eca4",
-                        "primary-dark": "#0dbd83",
+                        "primary": "#05998c",
+                        "primary-dark": "#037c6e",
+                        "primary-darker": "#025043",
+                        "primary-light": "#28a99e",
+                        "primary-lighter": "#81cdc6",
+                        "primary-lightest": "#b3e0dc",
                         "background-light": "#f6f8f7",
-                        "background-dark": "#10221c",
+                        "background-dark": "#025043",
                     },
                     fontFamily: {
                         "display": ["Plus Jakarta Sans", "sans-serif"]
@@ -40,10 +44,10 @@
             box-shadow: 0 4px 0 0 rgba(0,0,0,0.1);
         }
         .duo-button-shadow {
-            box-shadow: 0 4px 0 0 #0dbd83;
+            box-shadow: 0 4px 0 0 #037c6e;
         }
         .duo-button-shadow:active {
-            box-shadow: 0 0px 0 0 #0dbd83;
+            box-shadow: 0 0px 0 0 #037c6e;
             transform: translateY(4px);
         }
     </style>
@@ -63,7 +67,7 @@
 <h2 class="text-[#111816] dark:text-white text-lg font-extrabold leading-tight tracking-tight flex-1 text-center">Your Profile</h2>
 <div class="flex size-10 items-center justify-end">
 <button onclick="window.location.href='9.html'" class="flex items-center justify-center rounded-full bg-white dark:bg-zinc-800 size-10 shadow-sm text-[#111816] dark:text-white">
-<span class="material-symbols-outlined">settings</span>
+<span class="material-symbols-outlined">message</span>
 </button>
 </div>
 </div>
@@ -104,7 +108,7 @@
 <!-- Language Toggle Section -->
 <div class="px-4 py-4">
 <div class="bg-white dark:bg-zinc-900 rounded-lg p-1 flex duo-shadow border-2 border-zinc-100 dark:border-zinc-800">
-<button class="flex-1 flex items-center justify-center gap-2 py-3 bg-primary text-black font-extrabold rounded-lg duo-button-shadow transition-all">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 text-[#025043] font-extrabold rounded-lg duo-button-shadow transition-all" style="background-color: #81cdc6;">
 <span class="text-lg">🇺🇸</span>
 <span>English</span>
 </button>
@@ -124,7 +128,7 @@
 <h3 class="text-[#111816] dark:text-white text-lg font-extrabold">Grow your circle!</h3>
 <p class="text-[#61897c] dark:text-zinc-400 text-sm font-medium">Invite a sister to join and save together. Building futures, one friend at a time.</p>
 </div>
-<button class="w-full bg-primary text-[#111816] py-4 rounded-lg font-extrabold text-base duo-button-shadow flex items-center justify-center gap-2 mt-2">
+<button class="w-full py-4 rounded-lg font-extrabold text-base duo-button-shadow flex items-center justify-center gap-2 mt-2" style="background-color: #81cdc6; color: #025043;">
 <span class="material-symbols-outlined">share</span>
                 Share with Friends
             </button>
