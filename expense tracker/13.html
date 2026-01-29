@@ -134,15 +134,15 @@
 <div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-1 px-1">
 <button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
 <span>☕️ Coffee</span>
-<span class="text-primary font-semibold">$4.50</span>
+<span class="text-primary font-semibold">Rs. 4.50</span>
 </button>
 <button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
 <span>🚕 Uber</span>
-<span class="text-primary font-semibold">$12.00</span>
+<span class="text-primary font-semibold">Rs. 12.00</span>
 </button>
 <button class="whitespace-nowrap px-4 py-2.5 bg-card-light dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium flex items-center gap-2 shadow-sm">
 <span>🍎 Groceries</span>
-<span class="text-primary font-semibold">$25.00</span>
+<span class="text-primary font-semibold">Rs. 25.00</span>
 </button>
 </div>
 </div>
@@ -150,11 +150,11 @@
 <div class="flex justify-between items-end mb-4">
 <div>
 <p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Spent Today</p>
-<p class="text-2xl font-bold">$124.50</p>
+<p class="text-2xl font-bold">Rs. 124.50</p>
 </div>
 <div class="text-right">
 <p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Daily Budget</p>
-<p class="text-lg font-semibold">$200.00</p>
+<p class="text-lg font-semibold">Rs. 200.00</p>
 </div>
 </div>
 <div class="relative h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -162,7 +162,7 @@
 </div>
 <div class="mt-2 flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
 <span>0%</span>
-<span>Remaining: $75.50</span>
+<span>Remaining: Rs. 75.50</span>
 <span>100%</span>
 </div>
 </div>
@@ -199,7 +199,7 @@
 <div>
 <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Amount</label>
 <div class="relative">
-<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">$</span>
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">Rs.</span>
 <input type="number" id="expenseAmount" placeholder="0.00" class="w-full pl-8 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" step="0.01">
 </div>
 </div>
@@ -328,7 +328,7 @@ function addExpenseToList(category, amount, reason) {
                         </div>
                     </div>
                     <div class="flex items-center gap-3">
-                        <p class="text-lg font-bold text-slate-900 dark:text-white">$${parseFloat(amount).toFixed(2)}</p>
+                        <p class="text-lg font-bold text-slate-900 dark:text-white">Rs. ${parseFloat(amount).toFixed(2)}</p>
                         <button onclick="deleteExpense(this)" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-red-100 dark:hover:bg-red-900/20 text-slate-400 hover:text-red-500 transition-colors">
                             <span class="material-icons-outlined text-lg">delete</span>
                         </button>
